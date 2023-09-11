@@ -1,0 +1,1106 @@
+2023-09-11 07:41:07,926 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 300028 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 07:41:07,930 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 07:41:07,932 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 07:41:08,082 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 07:41:10,378 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 07:41:10,575 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 183 ms. Found 3 JPA repository interfaces.
+2023-09-11 07:41:13,606 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d5856636] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 07:41:14,573 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 07:41:14,691 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 07:41:14,728 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 07:41:14,728 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 07:41:15,418 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 07:41:15,418 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7195 ms
+2023-09-11 07:41:16,191 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 07:41:16,192 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 07:41:16,192 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 07:41:16,200 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 07:41:16,808 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 07:41:16,899 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 07:41:17,126 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.018s)
+2023-09-11 07:41:17,221 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Creating Schema History table "public"."flyway_schema_history" ...
+2023-09-11 07:41:17,493 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": << Empty Schema >>
+2023-09-11 07:41:17,504 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Migrating schema "public" to version "1.0.0 - create tables"
+2023-09-11 07:41:17,888 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Migrating schema "public" to version "1.0.1 - insert client table data"
+2023-09-11 07:41:17,910 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Migrating schema "public" to version "1.0.2 - insert product table data"
+2023-09-11 07:41:17,934 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully applied 3 migrations to schema "public", now at version v1.0.2 (execution time 00:00.463s)
+2023-09-11 07:41:18,150 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 07:41:18,287 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 07:41:18,678 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 07:41:18,870 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 07:41:20,035 ERROR org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [status] in table [withdrawal]
+2023-09-11 07:41:20,036 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [status] in table [withdrawal]
+2023-09-11 07:41:20,036 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-09-11 07:41:20,064 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-09-11 07:41:20,066 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2023-09-11 07:41:20,096 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-11 07:41:20,116 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [status] in table [withdrawal]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1157)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:911)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.client.invest.client.investment.ClientInvestmentApplication.main(ClientInvestmentApplication.java:12)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [status] in table [withdrawal]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [status] in table [withdrawal]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:144)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:97)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:76)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:204)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+2023-09-11 07:42:02,428 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 300168 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 07:42:02,434 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 07:42:02,436 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 07:42:02,504 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 07:42:03,849 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 07:42:03,933 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
+2023-09-11 07:42:04,472 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d5856636] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 07:42:04,785 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 07:42:04,794 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 07:42:04,829 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 07:42:04,830 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 07:42:04,939 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 07:42:04,939 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2345 ms
+2023-09-11 07:42:05,163 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 07:42:05,164 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 07:42:05,164 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 07:42:05,175 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 07:42:05,271 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 07:42:05,289 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 07:42:05,319 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.014s)
+2023-09-11 07:42:05,332 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Creating Schema History table "public"."flyway_schema_history" ...
+2023-09-11 07:42:05,510 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": << Empty Schema >>
+2023-09-11 07:42:05,523 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Migrating schema "public" to version "1.0.0 - create tables"
+2023-09-11 07:42:05,848 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Migrating schema "public" to version "1.0.1 - insert client table data"
+2023-09-11 07:42:05,874 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Migrating schema "public" to version "1.0.2 - insert product table data"
+2023-09-11 07:42:05,901 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully applied 3 migrations to schema "public", now at version v1.0.2 (execution time 00:00.399s)
+2023-09-11 07:42:06,003 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 07:42:06,045 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 07:42:06,269 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 07:42:06,389 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 07:42:07,272 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 07:42:07,880 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 07:42:09,691 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 07:42:10,619 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@623a891d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7962a364, org.springframework.security.web.context.SecurityContextPersistenceFilter@439b0198, org.springframework.security.web.header.HeaderWriterFilter@1516f497, org.springframework.security.web.csrf.CsrfFilter@3ec6f3f1, org.springframework.security.web.authentication.logout.LogoutFilter@1fa77770, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5fb0a09e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@36a25457, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@756030e2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@722d3ddb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c4e11d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29088d3d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@134ec0f3, org.springframework.security.web.session.SessionManagementFilter@4d204b30, org.springframework.security.web.access.ExceptionTranslationFilter@5bc44d78, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26d02dc6]
+2023-09-11 07:42:10,690 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 07:42:10,748 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 07:42:10,765 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 9.167 seconds (JVM running for 9.912)
+2023-09-11 08:20:16,591 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 08:20:16,614 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-09-11 08:20:16,626 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-09-11 09:24:22,200 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 303492 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 09:24:22,255 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 09:24:22,258 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 09:24:22,262 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 09:24:29,476 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 09:24:29,657 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 151 ms. Found 3 JPA repository interfaces.
+2023-09-11 09:24:30,670 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$77dc78f5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 09:24:31,619 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 09:24:31,670 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:24:31,697 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 09:24:31,698 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 09:24:32,542 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 09:24:32,543 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 10003 ms
+2023-09-11 09:24:33,027 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 09:24:33,030 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 09:24:33,031 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 09:24:33,046 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 09:24:33,462 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 09:24:33,479 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 09:24:33,595 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.074s)
+2023-09-11 09:24:33,617 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 09:24:33,619 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 09:24:33,942 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 09:24:34,079 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 09:24:34,517 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 09:24:34,852 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 09:24:36,128 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 09:24:36,140 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:24:37,649 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 09:24:38,640 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@308e465b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e7d9d0, org.springframework.security.web.context.SecurityContextPersistenceFilter@3ef4a8fb, org.springframework.security.web.header.HeaderWriterFilter@7e484bd, org.springframework.security.web.csrf.CsrfFilter@52b77d5e, org.springframework.security.web.authentication.logout.LogoutFilter@1454339d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@43a72f0f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6e21c6ed, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b0d818d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f6936cc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@edb8f0c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6f70015, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7212b28e, org.springframework.security.web.session.SessionManagementFilter@3e0600a4, org.springframework.security.web.access.ExceptionTranslationFilter@75b6bd41, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@193792e6]
+2023-09-11 09:24:38,689 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:24:38,763 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 09:24:38,781 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 18.451 seconds (JVM running for 20.119)
+2023-09-11 09:25:07,200 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 09:25:07,201 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-11 09:25:07,203 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+2023-09-11 09:25:07,536 WARN org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [202] milliseconds.
+2023-09-11 09:27:49,717 INFO org.springdoc.api.AbstractOpenApiResource [http-nio-8080-exec-4] Init duration for springdoc-openapi is: 1292 ms
+2023-09-11 09:31:00,707 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:31:00,728 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-09-11 09:31:00,734 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-09-11 09:31:18,568 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 303941 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 09:31:18,579 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 09:31:18,581 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 09:31:18,582 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 09:31:21,006 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 09:31:21,113 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 91 ms. Found 3 JPA repository interfaces.
+2023-09-11 09:31:21,959 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$7739eaa6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 09:31:22,719 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 09:31:22,736 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:31:22,752 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 09:31:22,753 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 09:31:23,069 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 09:31:23,071 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4231 ms
+2023-09-11 09:31:23,477 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 09:31:23,478 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 09:31:23,480 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 09:31:23,505 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 09:31:24,005 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 09:31:24,053 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 09:31:24,219 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.113s)
+2023-09-11 09:31:24,233 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 09:31:24,235 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 09:31:24,514 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 09:31:24,627 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 09:31:25,068 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 09:31:25,327 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 09:31:26,857 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 09:31:26,885 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:31:27,954 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 09:31:28,817 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@35b38986, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c000c2f, org.springframework.security.web.context.SecurityContextPersistenceFilter@21457b14, org.springframework.security.web.header.HeaderWriterFilter@36bd07ec, org.springframework.security.web.csrf.CsrfFilter@377d55, org.springframework.security.web.authentication.logout.LogoutFilter@47f4dc8d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5006a697, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@edb8f0c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2c7ac998, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@18d63996, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e1ae693, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e0600a4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f6936cc, org.springframework.security.web.session.SessionManagementFilter@26a004ed, org.springframework.security.web.access.ExceptionTranslationFilter@69e8f7a5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@923bf67]
+2023-09-11 09:31:28,858 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:31:28,929 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 09:31:28,961 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 12.169 seconds (JVM running for 16.191)
+2023-09-11 09:31:39,534 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 09:31:39,535 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 09:31:39,536 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-09-11 09:34:24,459 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 304173 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 09:34:24,499 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 09:34:24,501 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 09:34:24,502 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 09:34:26,324 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 09:34:26,411 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 75 ms. Found 3 JPA repository interfaces.
+2023-09-11 09:34:27,071 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$6cafbde4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 09:34:27,546 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 09:34:27,557 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:34:27,561 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 09:34:27,562 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 09:34:27,718 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 09:34:27,719 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3061 ms
+2023-09-11 09:34:28,008 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 09:34:28,009 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 09:34:28,009 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 09:34:28,024 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 09:34:28,172 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 09:34:28,193 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 09:34:28,245 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.030s)
+2023-09-11 09:34:28,263 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 09:34:28,266 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 09:34:28,431 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 09:34:28,491 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 09:34:28,751 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 09:34:28,959 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 09:34:30,067 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 09:34:30,079 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:34:32,360 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 09:34:33,142 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@87df88d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4f3b11e6, org.springframework.security.web.context.SecurityContextPersistenceFilter@613f48de, org.springframework.security.web.header.HeaderWriterFilter@3ef4a8fb, org.springframework.security.web.csrf.CsrfFilter@25093079, org.springframework.security.web.authentication.logout.LogoutFilter@6fc03cf6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e6bd43b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@cbaabfb, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@28da5c4d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2b0d818d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d8751de, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e21c6ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c928399, org.springframework.security.web.session.SessionManagementFilter@edb8f0c, org.springframework.security.web.access.ExceptionTranslationFilter@341141ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43a72f0f]
+2023-09-11 09:34:33,184 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:34:33,218 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 09:34:33,235 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 9.638 seconds (JVM running for 10.575)
+2023-09-11 09:34:40,994 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 09:34:40,996 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-11 09:34:41,000 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 4 ms
+2023-09-11 09:35:40,953 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 304433 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 09:35:40,961 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 09:35:40,962 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 09:35:41,010 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 09:35:42,607 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 09:35:42,710 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
+2023-09-11 09:35:43,378 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$dc80d39c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 09:35:43,824 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 09:35:43,836 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:35:43,840 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 09:35:43,840 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 09:35:43,999 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 09:35:43,999 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2865 ms
+2023-09-11 09:35:44,277 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 09:35:44,277 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 09:35:44,277 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 09:35:44,288 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 09:35:44,416 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 09:35:44,443 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 09:35:44,487 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.025s)
+2023-09-11 09:35:44,500 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 09:35:44,501 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 09:35:44,728 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 09:35:44,800 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 09:35:45,035 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 09:35:45,229 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 09:35:46,268 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 09:35:46,282 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:35:47,369 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 09:35:48,084 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1fa77770, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62f3ad90, org.springframework.security.web.context.SecurityContextPersistenceFilter@36bd07ec, org.springframework.security.web.header.HeaderWriterFilter@7890324e, org.springframework.security.web.csrf.CsrfFilter@1a3a6216, org.springframework.security.web.authentication.logout.LogoutFilter@4eb3b690, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@923bf67, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3e0600a4, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@18d63996, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2f2a5064, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26a004ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b6a4da7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e6bd43b, org.springframework.security.web.session.SessionManagementFilter@402fdef1, org.springframework.security.web.access.ExceptionTranslationFilter@37fc7e3c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@36a25457]
+2023-09-11 09:35:48,137 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:35:48,172 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 09:35:48,189 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 8.183 seconds (JVM running for 8.918)
+2023-09-11 09:35:53,258 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 09:35:53,259 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 09:35:53,263 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 4 ms
+2023-09-11 09:37:09,533 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 304630 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 09:37:09,538 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 09:37:09,539 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 09:37:09,587 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 09:37:11,331 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 09:37:11,448 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 104 ms. Found 3 JPA repository interfaces.
+2023-09-11 09:37:12,099 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$68280c93] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 09:37:12,606 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 09:37:12,619 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:37:12,624 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 09:37:12,625 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 09:37:12,815 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 09:37:12,815 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3135 ms
+2023-09-11 09:37:13,096 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 09:37:13,096 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 09:37:13,096 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 09:37:13,110 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 09:37:13,297 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 09:37:13,326 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 09:37:13,386 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.034s)
+2023-09-11 09:37:13,446 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 09:37:13,448 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 09:37:13,583 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 09:37:13,650 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 09:37:13,892 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 09:37:14,079 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 09:37:15,093 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 09:37:15,106 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:37:16,148 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 09:37:16,878 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@790ea58f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78a7fccd, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a3272e0, org.springframework.security.web.header.HeaderWriterFilter@6e3acd7, org.springframework.security.web.csrf.CsrfFilter@1773faf8, org.springframework.security.web.authentication.logout.LogoutFilter@7a3f3bc4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@cef23a8, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6fc03cf6, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@410e043b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4598961d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6db2a260, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1454339d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d3a238, org.springframework.security.web.session.SessionManagementFilter@47f4dc8d, org.springframework.security.web.access.ExceptionTranslationFilter@1d01fa0c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@87df88d]
+2023-09-11 09:37:16,926 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:37:16,960 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 09:37:16,975 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 8.312 seconds (JVM running for 9.107)
+2023-09-11 09:37:35,607 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 09:37:35,608 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 09:37:35,611 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-09-11 09:38:30,081 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 09:38:30,137 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 304908 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 09:38:30,141 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 09:38:30,149 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 09:38:31,767 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 09:38:31,858 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 78 ms. Found 3 JPA repository interfaces.
+2023-09-11 09:38:32,369 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$e3a7189c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 09:38:32,861 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 09:38:32,873 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:38:32,878 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 09:38:32,879 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 09:38:33,079 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 09:38:33,081 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2807 ms
+2023-09-11 09:38:33,470 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 09:38:33,482 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 09:38:33,482 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 09:38:33,496 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 09:38:33,647 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 09:38:33,675 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 09:38:33,729 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.029s)
+2023-09-11 09:38:33,742 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 09:38:33,744 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 09:38:33,900 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 09:38:33,978 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 09:38:34,233 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 09:38:34,419 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 09:38:35,456 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 09:38:35,469 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:38:37,380 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 09:38:37,907 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:38:37,929 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 09:38:37,947 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 8.725 seconds (JVM running for 9.552)
+2023-09-11 09:38:45,866 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 09:38:45,866 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 09:38:45,871 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 4 ms
+2023-09-11 09:38:46,229 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'javax.validation.constraints.NotEmpty' validating type 'java.lang.Long'. Check configuration for 'productId'] with root cause
+javax.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'javax.validation.constraints.NotEmpty' validating type 'java.lang.Long'. Check configuration for 'productId'
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116)
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162)
+	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:54)
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75)
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130)
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400)
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172)
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:109)
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66)
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:933)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.validateIfApplicable(AbstractMessageConverterMethodArgumentResolver.java:250)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:139)
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-09-11 09:39:53,820 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 305101 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 09:39:53,854 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 09:39:53,853 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 09:39:53,855 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 09:39:55,280 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 09:39:55,387 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 95 ms. Found 3 JPA repository interfaces.
+2023-09-11 09:39:55,968 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d193f04e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 09:39:56,417 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 09:39:56,427 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:39:56,431 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 09:39:56,432 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 09:39:56,573 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 09:39:56,574 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2606 ms
+2023-09-11 09:39:56,881 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 09:39:56,881 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 09:39:56,882 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 09:39:56,895 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 09:39:57,048 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 09:39:57,074 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 09:39:57,134 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.033s)
+2023-09-11 09:39:57,153 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 09:39:57,155 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 09:39:57,293 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 09:39:57,369 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 09:39:57,570 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 09:39:57,728 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 09:39:58,749 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 09:39:58,758 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:39:59,853 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 09:40:00,427 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:40:00,455 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 09:40:00,474 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 7.475 seconds (JVM running for 8.175)
+2023-09-11 09:40:16,004 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 09:40:16,004 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-11 09:40:16,006 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+2023-09-11 09:41:05,436 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is com.client.invest.client.investment.exception.InvalidAgeException: Client age: 38, not valid] with root cause
+com.client.invest.client.investment.exception.InvalidAgeException: Client age: 38, not valid
+	at com.client.invest.client.investment.service.WithdrawalImpl.validateWithdrawal(WithdrawalImpl.java:116)
+	at com.client.invest.client.investment.service.WithdrawalImpl.createWithdrawal(WithdrawalImpl.java:53)
+	at com.client.invest.client.investment.controller.WithdrawalController.createWithdrawal(WithdrawalController.java:20)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-09-11 09:49:09,850 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 305495 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 09:49:09,869 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 09:49:09,881 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 09:49:09,883 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 09:49:11,621 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 09:49:11,738 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 104 ms. Found 3 JPA repository interfaces.
+2023-09-11 09:49:12,338 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d4519d91] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 09:49:12,862 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 09:49:12,878 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:49:12,884 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 09:49:12,885 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 09:49:13,084 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 09:49:13,085 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3113 ms
+2023-09-11 09:49:13,389 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 09:49:13,389 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 09:49:13,390 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 09:49:13,404 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 09:49:13,553 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 09:49:13,583 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 09:49:13,672 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.058s)
+2023-09-11 09:49:13,687 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 09:49:13,697 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 09:49:13,826 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 09:49:13,892 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 09:49:14,144 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 09:49:14,318 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 09:49:15,355 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 09:49:15,369 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:49:16,698 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 09:49:17,629 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:49:17,660 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 09:49:17,678 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 8.637 seconds (JVM running for 9.301)
+2023-09-11 09:49:23,474 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 09:49:23,474 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Initializing Servlet 'dispatcherServlet'
+2023-09-11 09:49:23,478 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-3] Completed initialization in 4 ms
+2023-09-11 09:51:16,282 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 305724 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 09:51:16,304 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 09:51:16,305 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 09:51:16,323 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 09:51:17,838 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 09:51:17,932 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 79 ms. Found 3 JPA repository interfaces.
+2023-09-11 09:51:18,477 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$c699b335] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 09:51:18,975 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 09:51:18,989 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:51:18,994 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 09:51:18,995 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 09:51:19,154 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 09:51:19,155 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2723 ms
+2023-09-11 09:51:19,416 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 09:51:19,416 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 09:51:19,417 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 09:51:19,430 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 09:51:19,560 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 09:51:19,582 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 09:51:19,624 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.018s)
+2023-09-11 09:51:19,662 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Creating Schema History table "public"."flyway_schema_history" ...
+2023-09-11 09:51:20,237 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": << Empty Schema >>
+2023-09-11 09:51:20,256 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Migrating schema "public" to version "1.0.0 - create tables"
+2023-09-11 09:51:22,458 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Migrating schema "public" to version "1.0.1 - insert client table data"
+2023-09-11 09:51:22,493 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Migrating schema "public" to version "1.0.2 - insert product table data"
+2023-09-11 09:51:22,519 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully applied 3 migrations to schema "public", now at version v1.0.2 (execution time 00:02.300s)
+2023-09-11 09:51:22,627 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 09:51:22,677 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 09:51:22,908 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 09:51:23,040 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 09:51:23,846 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 09:51:23,856 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:51:24,710 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 09:51:25,180 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:51:25,213 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 09:51:25,226 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 9.86 seconds (JVM running for 11.484)
+2023-09-11 09:51:38,114 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 09:51:38,116 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 09:51:38,121 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 4 ms
+2023-09-11 09:52:47,558 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 09:52:47,608 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 305911 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 09:52:47,613 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 09:52:47,616 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 09:52:49,207 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 09:52:49,307 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+2023-09-11 09:52:49,837 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$a5824e31] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 09:52:50,272 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 09:52:50,288 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:52:50,292 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 09:52:50,293 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 09:52:50,438 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 09:52:50,439 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2697 ms
+2023-09-11 09:52:50,699 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 09:52:50,700 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 09:52:50,700 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 09:52:50,713 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 09:52:50,868 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 09:52:50,888 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 09:52:50,939 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.029s)
+2023-09-11 09:52:50,950 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 09:52:50,952 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 09:52:51,128 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 09:52:51,186 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 09:52:51,415 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 09:52:51,622 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 09:52:52,766 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 09:52:52,780 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 09:52:55,318 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 09:52:55,883 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 09:52:55,924 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 09:52:55,947 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 9.309 seconds (JVM running for 10.028)
+2023-09-11 09:53:55,494 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 09:53:55,503 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 09:53:55,506 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-09-11 09:55:10,917 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=47s827ms379µs277ns).
+2023-09-11 10:03:28,443 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 306484 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 10:03:28,488 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 10:03:28,562 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 10:03:28,563 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 10:03:30,882 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 10:03:31,044 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 138 ms. Found 3 JPA repository interfaces.
+2023-09-11 10:03:31,659 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$868249f7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 10:03:32,489 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 10:03:32,514 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 10:03:32,528 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 10:03:32,528 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 10:03:32,872 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 10:03:32,872 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3989 ms
+2023-09-11 10:03:33,335 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 10:03:33,335 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 10:03:33,336 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 10:03:33,362 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 10:03:34,129 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 10:03:34,161 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 10:03:34,226 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.024s)
+2023-09-11 10:03:34,238 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 10:03:34,240 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 10:03:34,495 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 10:03:34,615 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 10:03:34,969 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 10:03:35,337 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 10:03:36,376 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 10:03:36,396 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 10:03:37,490 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 10:03:38,050 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 10:03:38,156 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 10:03:38,198 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 11.625 seconds (JVM running for 13.785)
+2023-09-11 10:03:55,765 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 10:03:55,781 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-11 10:03:55,788 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 7 ms
+2023-09-11 10:14:33,795 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 306788 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 10:14:33,799 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 10:14:33,800 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 10:14:33,895 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 10:14:36,216 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 10:14:36,390 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 141 ms. Found 3 JPA repository interfaces.
+2023-09-11 10:14:36,964 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d13425d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 10:14:37,812 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 10:14:37,826 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 10:14:37,847 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 10:14:37,848 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 10:14:38,288 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 10:14:38,288 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4209 ms
+2023-09-11 10:14:38,730 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 10:14:38,730 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 10:14:38,730 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 10:14:38,754 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 10:14:39,405 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 10:14:39,433 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 10:14:39,477 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.025s)
+2023-09-11 10:14:39,494 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 10:14:39,495 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 10:14:39,748 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 10:14:39,882 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 10:14:40,352 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 10:14:40,698 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 10:14:41,793 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 10:14:41,821 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 10:14:43,130 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 10:14:43,912 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 10:14:43,985 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 10:14:44,014 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 11.929 seconds (JVM running for 14.001)
+2023-09-11 10:15:24,179 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 10:15:24,179 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-11 10:15:24,181 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+2023-09-11 10:15:27,975 INFO org.springframework.statemachine.support.LifecycleObjectSupport [http-nio-8080-exec-2] started org.springframework.statemachine.support.DefaultStateMachineExecutor@2f0d50b8
+2023-09-11 10:15:27,993 INFO org.springframework.statemachine.support.LifecycleObjectSupport [http-nio-8080-exec-2] started DONE EXECUTING STARTED  / STARTED / uuid=1e3c3b3c-4971-4889-b75e-fcb7c151b808 / id=null
+2023-09-11 10:15:28,759 INFO com.client.invest.client.investment.config.WithdrawalStateMachineConfiguration$1 [http-nio-8080-exec-2] stateChanged(from: ObjectState [getIds()=[STARTED], getClass()=class org.springframework.statemachine.state.ObjectState, hashCode()=1084603595, toString()=AbstractState [id=STARTED, pseudoState=org.springframework.statemachine.state.DefaultPseudoState@337375d0, deferred=[], entryActions=[], exitActions=[], stateActions=[], regions=[], submachine=null]], to: ObjectState [getIds()=[EXECUTING], getClass()=class org.springframework.statemachine.state.ObjectState, hashCode()=1865416133, toString()=AbstractState [id=EXECUTING, pseudoState=null, deferred=[], entryActions=[], exitActions=[], stateActions=[], regions=[], submachine=null]])
+2023-09-11 10:15:37,175 INFO com.client.invest.client.investment.controller.WithdrawalController [http-nio-8080-exec-2] after calling execute(): EXECUTING
+2023-09-11 10:16:00,166 INFO org.springframework.statemachine.support.LifecycleObjectSupport [http-nio-8080-exec-3] started org.springframework.statemachine.support.DefaultStateMachineExecutor@14c01f09
+2023-09-11 10:16:00,168 INFO org.springframework.statemachine.support.LifecycleObjectSupport [http-nio-8080-exec-3] started DONE EXECUTING STARTED  / EXECUTING / uuid=ebf5a342-2679-481b-a3f8-a17a57f9d663 / id=null
+2023-09-11 10:16:00,196 INFO com.client.invest.client.investment.config.WithdrawalStateMachineConfiguration$1 [http-nio-8080-exec-3] stateChanged(from: ObjectState [getIds()=[EXECUTING], getClass()=class org.springframework.statemachine.state.ObjectState, hashCode()=1027820561, toString()=AbstractState [id=EXECUTING, pseudoState=null, deferred=[], entryActions=[], exitActions=[], stateActions=[], regions=[], submachine=null]], to: ObjectState [getIds()=[DONE], getClass()=class org.springframework.statemachine.state.ObjectState, hashCode()=1560937288, toString()=AbstractState [id=DONE, pseudoState=org.springframework.statemachine.state.DefaultPseudoState@39d7121, deferred=[], entryActions=[], exitActions=[], stateActions=[], regions=[], submachine=null]])
+2023-09-11 10:16:00,197 INFO org.springframework.statemachine.support.LifecycleObjectSupport [http-nio-8080-exec-3] stopped org.springframework.statemachine.support.DefaultStateMachineExecutor@14c01f09
+2023-09-11 10:16:00,198 INFO org.springframework.statemachine.support.LifecycleObjectSupport [http-nio-8080-exec-3] stopped DONE EXECUTING STARTED  /  / uuid=ebf5a342-2679-481b-a3f8-a17a57f9d663 / id=null
+2023-09-11 10:16:00,198 INFO com.client.invest.client.investment.controller.WithdrawalController [http-nio-8080-exec-3] after calling done(): DONE
+2023-09-11 10:53:07,868 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 307854 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 10:53:07,872 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 10:53:07,873 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 10:53:08,034 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 10:53:10,856 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 10:53:10,960 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 89 ms. Found 3 JPA repository interfaces.
+2023-09-11 10:53:11,887 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$75ad65a6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 10:53:12,649 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 10:53:12,669 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 10:53:12,674 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 10:53:12,674 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 10:53:13,029 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 10:53:13,029 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4870 ms
+2023-09-11 10:53:13,445 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 10:53:13,446 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 10:53:13,446 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 10:53:13,457 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 10:53:13,965 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 10:53:14,002 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 10:53:14,071 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.032s)
+2023-09-11 10:53:14,085 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 10:53:14,087 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 10:53:14,378 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 10:53:14,614 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 10:53:15,128 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 10:53:15,385 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 10:53:16,473 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 10:53:16,495 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 10:53:17,990 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 10:53:19,010 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e7d9d0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2b0d818d, org.springframework.security.web.context.SecurityContextPersistenceFilter@30f99ca1, org.springframework.security.web.header.HeaderWriterFilter@7e1ae693, org.springframework.security.web.csrf.CsrfFilter@6ab6ec33, org.springframework.security.web.authentication.logout.LogoutFilter@1df8e685, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6fe33512, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@75c30a4f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7212b28e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@56bf6f1e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f70015, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d5fc340, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@306c8e09, org.springframework.security.web.session.SessionManagementFilter@341141ab, org.springframework.security.web.access.ExceptionTranslationFilter@21457b14, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21f9a305]
+2023-09-11 10:53:19,073 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 10:53:19,124 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 10:53:19,144 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 13.769 seconds (JVM running for 21.473)
+2023-09-11 10:56:12,348 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 10:56:12,348 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 10:56:12,353 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 4 ms
+2023-09-11 10:56:39,947 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 308062 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 10:56:39,952 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 10:56:39,953 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 10:56:40,002 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 10:56:41,630 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 10:56:41,732 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 87 ms. Found 3 JPA repository interfaces.
+2023-09-11 10:56:42,380 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$b04a3953] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 10:56:42,872 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 10:56:42,885 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 10:56:42,890 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 10:56:42,891 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 10:56:43,090 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 10:56:43,091 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3010 ms
+2023-09-11 10:56:43,441 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 10:56:43,441 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 10:56:43,441 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 10:56:43,456 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 10:56:43,617 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 10:56:43,639 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 10:56:43,721 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.060s)
+2023-09-11 10:56:43,740 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 10:56:43,743 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 10:56:43,893 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 10:56:43,959 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 10:56:44,187 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 10:56:44,408 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 10:56:45,875 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 10:56:45,890 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 10:56:47,093 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 10:56:47,831 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d3a238, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@9fd5dd0, org.springframework.security.web.context.SecurityContextPersistenceFilter@1454339d, org.springframework.security.web.header.HeaderWriterFilter@689fcf08, org.springframework.security.web.csrf.CsrfFilter@edb8f0c, org.springframework.security.web.authentication.logout.LogoutFilter@419ece7a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@60510791, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5b5d6f9c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4e7b89b6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@790ea58f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78723798, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ab3b54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f65639e, org.springframework.security.web.session.SessionManagementFilter@1a3272e0, org.springframework.security.web.access.ExceptionTranslationFilter@55b78dad, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c928399]
+2023-09-11 10:56:47,882 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 10:56:47,925 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 10:56:47,946 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 8.858 seconds (JVM running for 10.289)
+2023-09-11 10:57:37,125 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 10:57:37,125 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-09-11 10:57:37,127 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 2 ms
+2023-09-11 10:58:14,650 INFO org.springdoc.api.AbstractOpenApiResource [http-nio-8080-exec-2] Init duration for springdoc-openapi is: 729 ms
+2023-09-11 10:58:24,354 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.StringIndexOutOfBoundsException: String index out of range: -1] with root cause
+java.lang.StringIndexOutOfBoundsException: String index out of range: -1
+	at java.base/java.lang.String.substring(String.java:1841)
+	at org.springdoc.ui.AbstractSwaggerResourceResolver.path(AbstractSwaggerResourceResolver.java:71)
+	at org.springdoc.ui.AbstractSwaggerResourceResolver.findWebJarResourcePath(AbstractSwaggerResourceResolver.java:42)
+	at org.springdoc.webmvc.ui.SwaggerResourceResolver.resolveResource(SwaggerResourceResolver.java:34)
+	at org.springframework.web.servlet.resource.DefaultResourceResolverChain.resolveResource(DefaultResourceResolverChain.java:75)
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.getResource(ResourceHttpRequestHandler.java:627)
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:558)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:52)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:164)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter.doFilterInternal(DefaultLogoutPageGeneratingFilter.java:58)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:237)
+	at org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter.doFilter(DefaultLoginPageGeneratingFilter.java:223)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-09-11 10:59:04,733 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 10:59:04,788 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 308270 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 10:59:04,791 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 10:59:04,798 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 10:59:06,715 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 10:59:06,837 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 101 ms. Found 3 JPA repository interfaces.
+2023-09-11 10:59:07,520 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$c2310810] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 10:59:08,078 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 10:59:08,093 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 10:59:08,099 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 10:59:08,100 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 10:59:08,283 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 10:59:08,284 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3358 ms
+2023-09-11 10:59:08,618 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 10:59:08,627 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 10:59:08,628 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 10:59:08,639 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 10:59:08,882 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 10:59:08,925 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 10:59:08,997 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.034s)
+2023-09-11 10:59:09,011 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 10:59:09,012 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 10:59:09,156 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 10:59:09,232 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 10:59:09,496 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 10:59:09,714 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 10:59:10,884 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 10:59:10,900 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 10:59:12,111 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 10:59:12,987 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@44103266, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@439b0198, org.springframework.security.web.context.SecurityContextPersistenceFilter@3533d790, org.springframework.security.web.header.HeaderWriterFilter@1a61f634, org.springframework.security.web.csrf.CsrfFilter@687d31a9, org.springframework.security.web.authentication.logout.LogoutFilter@1013aa94, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3545c913, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@377d55, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@c2dab10, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@34766f4b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73dc7db0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a3a6216, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c4e11d0, org.springframework.security.web.session.SessionManagementFilter@609edb55, org.springframework.security.web.access.ExceptionTranslationFilter@3e7fc07e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41271320]
+2023-09-11 10:59:13,050 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 10:59:13,085 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 10:59:13,104 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 9.514 seconds (JVM running for 10.681)
+2023-09-11 10:59:25,579 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 10:59:25,580 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 10:59:25,583 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-09-11 11:13:33,894 INFO org.springdoc.api.AbstractOpenApiResource [http-nio-8080-exec-9] Init duration for springdoc-openapi is: 1055 ms
+2023-09-11 11:13:45,167 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 11:13:45,257 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 308630 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 11:13:45,268 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 11:13:45,269 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 11:13:47,078 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 11:13:47,163 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
+2023-09-11 11:13:47,840 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$5ddcbdb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 11:13:48,307 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 11:13:48,320 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 11:13:48,325 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 11:13:48,325 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 11:13:48,497 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 11:13:48,498 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3095 ms
+2023-09-11 11:13:48,839 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 11:13:48,840 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 11:13:48,840 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 11:13:48,853 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 11:13:49,010 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 11:13:49,040 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 11:13:49,110 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.045s)
+2023-09-11 11:13:49,154 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 11:13:49,157 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 11:13:49,339 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 11:13:49,409 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 11:13:49,645 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 11:13:49,814 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 11:13:51,060 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 11:13:51,075 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 11:13:52,211 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 11:13:53,057 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2e8eafb2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7a3f3bc4, org.springframework.security.web.context.SecurityContextPersistenceFilter@37a36194, org.springframework.security.web.header.HeaderWriterFilter@362e6fe, org.springframework.security.web.csrf.CsrfFilter@74159dc9, org.springframework.security.web.authentication.logout.LogoutFilter@1a61f634, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3514df8d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6ce24203, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@8cd2bb5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@6f076c53, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6abaa14b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b60be3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a3611b1, org.springframework.security.web.session.SessionManagementFilter@6779af40, org.springframework.security.web.access.ExceptionTranslationFilter@46067a74, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35d62807]
+2023-09-11 11:13:53,115 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 11:13:53,146 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 11:13:53,167 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 9.004 seconds (JVM running for 9.661)
+2023-09-11 11:14:06,245 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 11:14:06,248 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 11:14:06,253 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 5 ms
+2023-09-11 11:43:24,667 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 310958 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 11:43:24,700 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 11:43:24,722 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 11:43:24,723 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 11:43:28,496 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 11:43:28,606 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 95 ms. Found 3 JPA repository interfaces.
+2023-09-11 11:43:29,557 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$14362bee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 11:43:31,057 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 11:43:31,066 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 11:43:31,139 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 11:43:31,140 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 11:43:31,825 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 11:43:31,826 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 6744 ms
+2023-09-11 11:43:32,226 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 11:43:32,226 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 11:43:32,227 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 11:43:32,242 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 11:43:32,895 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 11:43:32,924 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 11:43:33,038 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.042s)
+2023-09-11 11:43:33,053 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 11:43:33,055 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 11:43:33,316 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 11:43:33,471 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 11:43:33,862 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 11:43:34,091 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 11:43:35,125 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 11:43:35,162 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 11:43:36,576 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 11:43:37,471 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6fe33512, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fa77770, org.springframework.security.web.context.SecurityContextPersistenceFilter@1013aa94, org.springframework.security.web.header.HeaderWriterFilter@1c96bf1e, org.springframework.security.web.csrf.CsrfFilter@73dc7db0, org.springframework.security.web.authentication.logout.LogoutFilter@48614fb3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@489c15e2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7e1ae693, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@62f3ad90, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@aaf4375, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@85b9f9c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@26a004ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18d63996, org.springframework.security.web.session.SessionManagementFilter@14764fdd, org.springframework.security.web.access.ExceptionTranslationFilter@25093079, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22c0c0bc]
+2023-09-11 11:43:37,526 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 11:43:37,590 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 11:43:37,622 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 14.369 seconds (JVM running for 18.243)
+2023-09-11 11:43:46,063 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 11:43:46,064 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 11:43:46,068 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-09-11 11:44:08,650 INFO org.springdoc.api.AbstractOpenApiResource [http-nio-8080-exec-3] Init duration for springdoc-openapi is: 841 ms
+2023-09-11 11:46:54,338 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 11:46:54,341 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-09-11 11:46:54,362 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-09-11 12:25:18,927 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 312723 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 12:25:18,932 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 12:25:18,933 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 12:25:18,933 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 12:25:23,272 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 12:25:23,368 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
+2023-09-11 12:25:24,281 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$34b6d017] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 12:25:24,928 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 12:25:24,940 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 12:25:24,977 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 12:25:24,981 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 12:25:25,318 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 12:25:25,318 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 6098 ms
+2023-09-11 12:25:25,733 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 12:25:25,734 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 12:25:25,734 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 12:25:25,746 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 12:25:26,215 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 12:25:26,239 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 12:25:26,320 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.035s)
+2023-09-11 12:25:26,330 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 12:25:26,331 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 12:25:26,602 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 12:25:26,718 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 12:25:27,074 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 12:25:27,270 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 12:25:28,338 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 12:25:28,362 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 12:25:29,546 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 12:25:30,765 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c928399, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bcca516, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e21c6ed, org.springframework.security.web.header.HeaderWriterFilter@6f70015, org.springframework.security.web.csrf.CsrfFilter@7890324e, org.springframework.security.web.authentication.logout.LogoutFilter@5b5d6f9c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1c000c2f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1d01fa0c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@cef23a8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@87df88d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@360e4235, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1b0fc8b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@762d2e4c, org.springframework.security.web.session.SessionManagementFilter@613f48de, org.springframework.security.web.access.ExceptionTranslationFilter@30f99ca1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@62f3ad90]
+2023-09-11 12:25:30,809 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 12:25:30,862 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 12:25:30,895 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 13.309 seconds (JVM running for 16.374)
+2023-09-11 12:25:49,389 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 12:25:49,389 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 12:25:49,390 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-09-11 12:25:59,846 INFO org.springdoc.api.AbstractOpenApiResource [http-nio-8080-exec-9] Init duration for springdoc-openapi is: 871 ms
+2023-09-11 12:29:58,436 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 12:29:58,441 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-09-11 12:29:58,467 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-09-11 13:17:44,062 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 314569 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 13:17:44,061 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 13:17:44,090 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 13:17:44,099 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 13:17:45,560 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 13:17:45,659 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+2023-09-11 13:17:46,277 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$9cd769a0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 13:17:46,748 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 13:17:46,762 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 13:17:46,767 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 13:17:46,767 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 13:17:46,894 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 13:17:46,895 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2697 ms
+2023-09-11 13:17:47,190 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 13:17:47,191 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 13:17:47,191 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 13:17:47,203 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 13:17:47,325 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 13:17:47,350 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 13:17:47,398 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.027s)
+2023-09-11 13:17:47,410 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 13:17:47,411 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 13:17:47,594 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 13:17:47,660 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 13:17:47,876 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 13:17:48,020 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 13:17:48,938 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 13:17:48,954 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 13:17:49,957 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 13:17:50,226 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Invalid mapping on handler class [com.client.invest.client.investment.controller.ProductController]: public com.client.invest.client.investment.controller.model.ProductResponse com.client.invest.client.investment.controller.ProductController.createProduct(java.lang.Long,com.client.invest.client.investment.controller.model.ProductRequest)
+2023-09-11 13:17:50,229 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 13:17:50,232 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2023-09-11 13:17:50,260 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2023-09-11 13:17:50,262 INFO org.apache.juli.logging.DirectJDKLog [main] Stopping service [Tomcat]
+2023-09-11 13:17:50,283 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-09-11 13:17:50,440 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Invalid mapping pattern detected: /products/{clientId]
+                   ^
+Char ']' is not allowed in a captured variable name
+
+Action:
+
+Fix this pattern in your application or switch to the legacy parser implementation with 'spring.mvc.pathmatch.matching-strategy=ant_path_matcher'.
+
+2023-09-11 13:18:33,671 INFO org.springframework.boot.StartupInfoLogger [main] Starting ClientInvestmentApplication using Java 11.0.20.1 on clonz-pc with PID 314708 (/home/clonz/Dev/work/client-investment/build/classes/java/main started by clonz in /home/clonz/Dev/work/client-investment)
+2023-09-11 13:18:33,678 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.7.15, Spring v5.3.29
+2023-09-11 13:18:33,679 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-09-11 13:18:33,757 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.2.5.Final
+2023-09-11 13:18:35,227 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-11 13:18:35,311 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 71 ms. Found 3 JPA repository interfaces.
+2023-09-11 13:18:35,904 INFO org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration' of type [org.springframework.statemachine.config.configuration.StateMachineAnnotationPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d0c4ce13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-11 13:18:36,316 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-09-11 13:18:36,328 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-09-11 13:18:36,332 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-09-11 13:18:36,333 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.79]
+2023-09-11 13:18:36,479 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-09-11 13:18:36,480 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2665 ms
+2023-09-11 13:18:36,760 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Flyway Community Edition 8.5.13 by Redgate
+2023-09-11 13:18:36,761 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] See what's new here: https://flywaydb.org/documentation/learnmore/releaseNotes#8.5.13
+2023-09-11 13:18:36,762 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] 
+2023-09-11 13:18:36,775 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-09-11 13:18:36,892 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-09-11 13:18:36,916 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Database: jdbc:postgresql://localhost:5432/clientdb (PostgreSQL 11.0)
+2023-09-11 13:18:36,965 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Successfully validated 3 migrations (execution time 00:00.028s)
+2023-09-11 13:18:36,978 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Current version of schema "public": 1.0.2
+2023-09-11 13:18:36,979 INFO org.flywaydb.core.internal.logging.slf4j.Slf4jLog [main] Schema "public" is up to date. No migration necessary.
+2023-09-11 13:18:37,165 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-11 13:18:37,224 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-09-11 13:18:37,397 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-11 13:18:37,579 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-09-11 13:18:38,497 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-11 13:18:38,513 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 13:18:39,482 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-11 13:18:40,130 INFO org.springframework.security.web.DefaultSecurityFilterChain [main] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f65639e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@673fdc28, org.springframework.security.web.context.SecurityContextPersistenceFilter@ab3b54, org.springframework.security.web.header.HeaderWriterFilter@7bc3c59f, org.springframework.security.web.csrf.CsrfFilter@613f48de, org.springframework.security.web.authentication.logout.LogoutFilter@91c11b6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4bb644dc, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2bf2523f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4cf1ec2, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5d3a238, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fc03cf6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e70861, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16eb01d4, org.springframework.security.web.session.SessionManagementFilter@1454339d, org.springframework.security.web.access.ExceptionTranslationFilter@738153d8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@762d2e4c]
+2023-09-11 13:18:40,183 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-09-11 13:18:40,210 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-11 13:18:40,232 INFO org.springframework.boot.StartupInfoLogger [main] Started ClientInvestmentApplication in 7.339 seconds (JVM running for 7.937)
+2023-09-11 13:18:47,184 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-11 13:18:47,185 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-09-11 13:18:47,189 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 3 ms
+2023-09-11 13:18:57,624 INFO org.springdoc.api.AbstractOpenApiResource [http-nio-8080-exec-7] Init duration for springdoc-openapi is: 1020 ms
+2023-09-11 14:00:33,096 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-11 14:00:33,118 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-09-11 14:00:33,139 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
