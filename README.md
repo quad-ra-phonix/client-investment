@@ -20,6 +20,11 @@ You can import gralde project to IDE.
 start postgres database.
 flyway scripts will create the schema and insert initial data at application startup.
 
+# Application Security
+Rest api endpoints are secured with basic authentication
+- user: user
+- password: password
+
 # To view the swagger documentation
 while project is running, open on browser: http://localhost:8080/swagger-ui/index.html#
 
